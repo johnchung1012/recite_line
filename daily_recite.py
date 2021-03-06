@@ -36,9 +36,13 @@ else:
 	if (e_day == 0):
 		for i in range(2):	
 			row = listReport[i]
-			print("徒{}:{} {}\n".format(row[0], row[1], row[2]))
+			message = "徒{}:{} {}\n".format(row[0], row[1], row[2])
 
 	else:
 		for i in range(2*e_day-2, 2*e_day+2):
 			row = listReport[i]
-			print("徒{}:{} {}\n".format(row[0], row[1], row[2]))
+			message = "徒{}:{} {}\n".format(row[0], row[1], row[2])
+
+token = '6R7E6JodLB5RAaH2N7DuZjlLnXqZHglmSBZGElrWwY2'
+result = lineNotifyMessage(token, message)
+print(result) # 印一下回傳代碼
